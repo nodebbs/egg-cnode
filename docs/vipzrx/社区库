@@ -1,0 +1,28 @@
+* 
+社区成员维护的开源库
+
+模块 npm地址 维护人
+
+模板还是做成json格式
+维护人,最好还是能对应到一个人,这样方便追踪.
+
+* 模板
+** 项目名称
+** 地址
+** 简介
+** 维护人
+** 反馈
+
+* eggjs 
+* egg-cnode
+** 项目名称
+egg-cnode
+** 地址
+https://github.com/cnodejs/egg-cnode
+** 简介
+** 维护人
+https://github.com/cnodejs/
+** 反馈
+https://github.com/cnodejs/egg-cnode/issues
+
+

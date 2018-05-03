@@ -1,0 +1,13 @@
+使用敏捷开发
+
+* 构建build
+https://travis-ci.org/cnodejs/egg-cnode
+* 覆盖率coverage
+https://codecov.io/gh/cnodejs/egg-cnode
+
+* 依赖dependencies
+https://david-dm.org/cnodejs/egg-cnode
+
+* 安全隐患vulnerabilies
+https://snyk.io/test/github/cnodejs/egg-cnode?severity=high&severity=medium&severity=low
+
