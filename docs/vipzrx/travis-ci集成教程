@@ -1,0 +1,42 @@
+登录地址
+https://travis-ci.org
+
+点击"Sign in with GitHub " ,跳转到 github授权页面,
+Organization access 列表中,对应repo 点击绿色"Grant",授权成功后,显示成红色"Revoke"
+
+点击列表下方绿色 "Authorize travis-ci"
+
+跳转到成功页面
+
+Great news!
+We've successfully synchronized your details from GitHub.
+We will redirect you to your profile in a few seconds.
+
+We're only showing your public repositories. You can find your private projects on travis-ci.com.
+
+控制面板 界面
+https://travis-ci.org/profile/vipzrx
+
+打开repo的开关
+
+添加 .travis.yml到repo根目录下
+
+.travis.yml
+
+#+BEGIN_SRC 
+sudo: false
+language: node_js
+node_js:
+  - '8'
+install:
+  - npm i npminstall && npminstall
+script:
+  - npm run ci
+after_script:
+  - npminstall codecov && codecov
+services:
+  - redis-server
+  - mongodb
+#+END_SRC
+
+使用git push 触发首次构建
