@@ -130,15 +130,22 @@ Already up-to-date.
 
 *** 向egg-cnode提交pr
 
+<<<<<<< HEAD
 ** linux下显示隐藏文件
+=======
+**  linux下显示隐藏文件
+>>>>>>> b71df83cabc13a903a64f427fe6b06b123c539db
 linux下.开头文件为隐藏文件,Ctrl+H 显示隐藏文件
 
 命令行下 使用ls -a 显示隐藏文件
 
+<<<<<<< HEAD
 ** github commit提交乱码
  create mode 100644 "docs/vipzrx/\350\277\220\344\275\234\345\275\242\345\274\217"
 ➜  nodebbs_egg-cnode git:(master) git config --global core.quotepath false
 
+=======
+>>>>>>> b71df83cabc13a903a64f427fe6b06b123c539db
 ** 添加自己的readme
 github上readme的顺序
 
@@ -171,6 +178,11 @@ To gh:nodebbs/egg-cnode.git
    ac01b48..fc5cd30  master -> master
 
 #+END_SRC
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b71df83cabc13a903a64f427fe6b06b123c539db
 #+BEGIN_SRC 
 ➜  soft_github git clone gh:nodebbs/egg-cnode.git nodebbs_egg-cnode
 Cloning into 'nodebbs_egg-cnode'...
@@ -229,10 +241,13 @@ To gh:nodebbs/egg-cnode.git
 ➜  nodebbs_egg-cnode git:(master) 
 
 #+END_SRC
+<<<<<<< HEAD
 ** 建立硬链接
 #+BEGIN_SRC 
 ➜  ~ ln '/mnt/h21t/soft/soft_github/nodebbs_egg-cnode/docs/vipzrx/README.org' '/mnt/h21t/soft/soft_github/nodebbs_egg-cnode/.github'
 
 #+END_SRC
+=======
+>>>>>>> b71df83cabc13a903a64f427fe6b06b123c539db
 
 ** 任务模板
