@@ -1,0 +1,40 @@
+* 说明
+模板放到.github/
+
+讨论地址: issue中的 可引用编号
+状态: 使用机器人抓取issue状态和标签,并更新状态变更
+负责人: 抓取issue页面中的 assign 
+
+变更记录: 这个需要抓取issue的第一条
+
+时间 联系方式
+描述
+
+  issue的第一条,由负责人负责维护更新
+建议
+* 模板
+github的模板必须要大写吗?
+
+Template_Nodebbs_Issue.md
+TEMPLATE_NODEBBS_PR.md
+TEMPLATE_NODEBBS_SUGGEST.md
+
+
+* #1-刷新浏览器,帖子浏览数可人为增加
+讨论地址:
+状态:
+负责人:
+
+变更记录:
+
+20180419 @vipzrx
+
+显示帖子浏览数的两个地方
+/home/kk/pic/pic_fs/20180419_002.png
+/home/kk/pic/pic_fs/20180419_001.png 
+
+打开帖子后,刷新浏览器,刷新一次,两处的浏览次数都会增加.多次刷新,会增加对应刷新数量的阅读数量
+
+
+
+ 

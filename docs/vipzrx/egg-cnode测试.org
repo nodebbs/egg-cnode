@@ -1,0 +1,41 @@
+** egg-cnode测试
+https://cnodejs.org/topic/5aae1cc8f5dfc27d7ad98909
+公测帖子
+
+本地测试环境
+vagrant拉取配置好的镜像
+virtualbox
+镜像说明
+安装软件
+软件版本
+docker
+
+报错运行的脚本
+提示将自己信息替换掉
+不同配置文件,提示要隐藏的信息
+
+** pros-and-cons-about-nodejs
+讨论nodejs的好处与坏处
+一个总的帖子,进行相关讨论
+
+Pros
+
+Cons
+
+Conclusion
+评价总结
+
+苏宁的钱都化完了
+临时的任务,新开一个terminal,处理完成了,就关闭掉.相当于是开了一个分支
+
+bin存放可以公开的脚本
+使用github托管
+
+pri中存放有帐号,不方便公开的配置,脚本
+ss自动启动脚本
+
+搭建samba
+共享文件
+将H2的1T b共享出来
+
+和外界的共享,通过虚拟机来做跳板,控制好权限
