@@ -1,5 +1,4 @@
-使用敏捷开发
-
+* [[file:%E5%8F%91%E5%B8%83%E5%91%A8%E6%9C%9F.org][发布周期]]
 * 构建build
 https://travis-ci.org/cnodejs/egg-cnode
 * 覆盖率coverage

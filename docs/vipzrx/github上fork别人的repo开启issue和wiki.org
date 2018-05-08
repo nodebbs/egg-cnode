@@ -1,0 +1,6 @@
+github上fork别人的repo,默认没有issue wikis projects
+需要手动开启
+20180508_001.png
+20180508_002.png
+
+cnode上讨论地址

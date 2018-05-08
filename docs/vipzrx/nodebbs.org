@@ -1,6 +1,8 @@
-* 0
- [[file:lfs-egg-cnode.org][lfs-egg-cnode含义]]  [[file:%E6%9C%AF%E8%AF%AD.org][术语]] [[file:nodebbs-aboutme.org][nodebbs-aboutme]]  [[file:travis-ci%E9%9B%86%E6%88%90%E6%95%99%E7%A8%8B.org][travis-ci集成教程]] 
+* [[file:nodebbs-vipzrx-todo.org][nodebbs-vipzrx-todo]]
 
+[[file:linux%E4%B8%8B%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6.org][linux下显示隐藏文件]]  [[file:github%20commit%E6%8F%90%E4%BA%A4%E4%B9%B1%E7%A0%81.org][github commit提交乱码]]
+ [[file:lfs-egg-cnode.org][lfs-egg-cnode含义]]  [[file:%E6%9C%AF%E8%AF%AD.org][术语]] [[file:nodebbs-aboutme.org][nodebbs-aboutme]]  [[file:travis-ci%E9%9B%86%E6%88%90%E6%95%99%E7%A8%8B.org][travis-ci集成教程]]  [[file:nodebbs%E9%83%A8%E7%BD%B2%E8%A6%81%E6%B1%82.org][nodebbs部署要求]]  [[file:pros-and-cons-about-nodejs.org][pros-and-cons-about-nodejs]] [[file:nodebbs-aboutme.org][nodebbs-aboutme]] [[file:nodebbs%E6%9D%BF%E5%9D%97%E8%AE%BE%E8%AE%A1.org][nodebbs板块设计]]
+* 0
 ** 0
 github的使用,还是要真正的协作使用起来,才知道怎么用
 
@@ -39,8 +41,7 @@ Resolving deltas: 100% (645/645), done.
 
 #+END_SRC
 
-*** 建立远程分支,跟踪cnode/egg-cnode的最新代
-码
+*** 建立远程分支,跟踪cnode/egg-cnode的最新代码
 
 进入源码目录
 ➜  soft_github cd nodebbs_egg-cnode 
@@ -52,7 +53,7 @@ origin	gh:nodebbs/egg-cnode.git (fetch)
 origin	gh:nodebbs/egg-cnode.git (push)
 
 #+END_SRC
-时自己fork的版本
+是自己fork的版本
 
 添加被fork地址为远程分支
 #+BEGIN_SRC 
@@ -103,10 +104,8 @@ Already up-to-date.
 #+END_SRC
 
 *** 自己在本地添加自己的修改
-
 *** push到自己的fork和别人协作
 *** 向egg-cnode提交pr
-[[file:linux%E4%B8%8B%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6.org][linux下显示隐藏文件]]  [[file:github%20commit%E6%8F%90%E4%BA%A4%E4%B9%B1%E7%A0%81.org][github commit提交乱码]]
 ** 添加自己的readme
 github上readme的顺序
 
@@ -139,11 +138,7 @@ To gh:nodebbs/egg-cnode.git
    ac01b48..fc5cd30  master -> master
 
 #+END_SRC
-<<<<<<< HEAD
-=======
 
-
->>>>>>> b71df83cabc13a903a64f427fe6b06b123c539db
 #+BEGIN_SRC 
 ➜  soft_github git clone gh:nodebbs/egg-cnode.git nodebbs_egg-cnode
 Cloning into 'nodebbs_egg-cnode'...
@@ -202,126 +197,14 @@ To gh:nodebbs/egg-cnode.git
 ➜  nodebbs_egg-cnode git:(master) 
 
 #+END_SRC
-<<<<<<< HEAD
 ** 建立硬链接
 #+BEGIN_SRC 
 ➜  ~ ln '/mnt/h21t/soft/soft_github/nodebbs_egg-cnode/docs/vipzrx/README.org' '/mnt/h21t/soft/soft_github/nodebbs_egg-cnode/.github'
 
 #+END_SRC
 ** 任务模板
-** tutorials/Docker.md
 ** 安装docker
-** 安装docker-compose
-https://docs.docker.com/compose/install/#install-compose
-
-https://github.com/docker/compose/releases
-最新版本
-
-https://docs.docker.com/compose/reference/
-命令行工具
-
-curl使用代理
-下载github上的东西,不使用代理速度很慢,使用代理之后,速度很快
-
-curl: (56) Proxy CONNECT aborted
-#+BEGIN_SRC 
-➜  ~ sudo curl -x 127.0.0.1:1080 -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-curl: (56) Proxy CONNECT aborted
-#+END_SRC
--x支持的时http代理 使用ss的socks 
-
-下载docker-compose 
-#+BEGIN_SRC 
-➜  ~ proxychains4 sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose 
-[proxychains] config file found: /home/kk/.proxychains/proxychains.conf
-[proxychains] preloading /usr/lib/libproxychains4.so
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   617    0   617    0     0    374      0 --:--:--  0:00:01 --:--:--   375
-100 10.3M  100 10.3M    0     0  1513k      0  0:00:07  0:00:07 --:--:-- 2637k
-
-#+END_SRC
-
-添加可执行权限
-#+BEGIN_SRC 
-➜  ~ sudo chmod +x /usr/local/bin/docker-compose
-#+END_SRC
-
-配置自动补全,使用zsh
-
-查看安装版本
-#+BEGIN_SRC 
-➜  ~ docker-compose --version
-docker-compose version 1.21.0, build 5920eb0
-
-#+END_SRC
-
-** docker-compose的自动补全插件
-https://docs.docker.com/compose/completion/#zsh
-
-新建插件目录
-➜  ~ mkdir -p ~/.zsh/completion
-
-下载zsh自动补全插件
-#+BEGIN_SRC 
-➜  ~ proxychains4 curl -L https://raw.githubusercontent.com/docker/compose/1.21.0/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
-[proxychains] config file found: /home/kk/.proxychains/proxychains.conf
-[proxychains] preloading /usr/lib/libproxychains4.so
-[proxychains] DLL init: proxychains-ng 4.12-git-15-gbb30d86
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[proxychains] Strict chain  ...  127.0.0.1:1080  ...  raw.githubusercontent.com:443  ...  OK
-100 19036  100 19036    0     0  13781      0  0:00:01  0:00:01 --:--:-- 13784
-
-#+END_SRC
-
-Include the directory in your $fpath by adding in ~/.zshrc:
-
-在~/.zshrc众添加
-fpath=(~/.zsh/completion $fpath)
-
-Make sure compinit is loaded or do it by adding in ~/.zshrc
-
-autoload -Uz compinit && compinit -i
-
-重新加载shell
-
-exec $SHELL -l
-
-
-Place the completion script in your /path/to/zsh/completion (typically ~/.zsh/completion/):
-
-$ mkdir -p ~/.zsh/completion
-$ curl -L https://raw.githubusercontent.com/docker/compose/1.21.0/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
-
-Include the directory in your $fpath by adding in ~/.zshrc:
-fpath=(~/.zsh/completion $fpath)
-
-Make sure compinit is loaded or do it by adding in ~/.zshrc:
-
-autoload -Uz compinit && compinit -i
-
-Then reload your shell:
-
-exec $SHELL -l
-
-可以补全的选项
-
-Available completions
-Depending on what you typed on the command line so far, it completes:
-
-available docker-compose commands
-
-options that are available for a particular command
-service names that make sense in a given context, such as services with running or stopped instances or services based on images vs. services based on Dockerfiles. For docker-compose scale, completed service names automatically have “=” appended.
-arguments for selected options. For example, docker-compose kill -s completes some signals like SIGHUP and SIGUSR1.
-Enjoy working with Compose faster and with less typos!
-** 使用非root用户管理docker
-https://docs.docker.com/install/linux/linux-postinstall/
-** debian安装docker
+*** debian安装docker
 https://docs.docker.com/install/linux/docker-ce/debian/#set-up-the-repository
 按照这个教程安装
 
@@ -431,243 +314,126 @@ debian默认没有配置文件,新建一个
 
 重启docker
 ➜  ~ sudo service docker restart
+*** 安装docker-compose
+https://docs.docker.com/compose/install/#install-compose
 
-** [[file:%E5%8F%91%E5%B8%83%E5%91%A8%E6%9C%9F.org][发布周期]]
-每周冻结一次,周一开始版本翻译.周一重置issue中的task list流程
+https://github.com/docker/compose/releases
+最新版本
 
-分层负责
-同步微软的更新
+https://docs.docker.com/compose/reference/
+命令行工具
 
-写上文档的更新日期
-让看得人知道文档是新的
+curl使用代理
+下载github上的东西,不使用代理速度很慢,使用代理之后,速度很快
 
-怎么确保文档的准确性?
-翻译错会误导人,翻译的好,节省时间,帮助理解
+curl: (56) Proxy CONNECT aborted
+#+BEGIN_SRC 
+➜  ~ sudo curl -x 127.0.0.1:1080 -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (56) Proxy CONNECT aborted
+#+END_SRC
+-x支持的时http代理 使用ss的socks 
 
-和微软那边联系
-中文文档的链接地址加到英文文档的首页位置
-一些人力资金资源
-给微软的信,先写成中文的,再写成英文的
+下载docker-compose 
+#+BEGIN_SRC 
+➜  ~ proxychains4 sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose 
+[proxychains] config file found: /home/kk/.proxychains/proxychains.conf
+[proxychains] preloading /usr/lib/libproxychains4.so
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   617    0   617    0     0    374      0 --:--:--  0:00:01 --:--:--   375
+100 10.3M  100 10.3M    0     0  1513k      0  0:00:07  0:00:07 --:--:-- 2637k
 
-** [[file:nodebbs%E9%83%A8%E7%BD%B2%E8%A6%81%E6%B1%82.org][nodebbs部署要求]]
+#+END_SRC
+
+添加可执行权限
+#+BEGIN_SRC 
+➜  ~ sudo chmod +x /usr/local/bin/docker-compose
+#+END_SRC
+
+配置自动补全,使用zsh
+
+查看安装版本
+#+BEGIN_SRC 
+➜  ~ docker-compose --version
+docker-compose version 1.21.0, build 5920eb0
+
+#+END_SRC
+
+*** docker-compose的自动补全插件
+https://docs.docker.com/compose/completion/#zsh
+
+新建插件目录
+➜  ~ mkdir -p ~/.zsh/completion
+
+下载zsh自动补全插件
+#+BEGIN_SRC 
+➜  ~ proxychains4 curl -L https://raw.githubusercontent.com/docker/compose/1.21.0/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
+[proxychains] config file found: /home/kk/.proxychains/proxychains.conf
+[proxychains] preloading /usr/lib/libproxychains4.so
+[proxychains] DLL init: proxychains-ng 4.12-git-15-gbb30d86
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[proxychains] Strict chain  ...  127.0.0.1:1080  ...  raw.githubusercontent.com:443  ...  OK
+100 19036  100 19036    0     0  13781      0  0:00:01  0:00:01 --:--:-- 13784
+
+#+END_SRC
+
+Include the directory in your $fpath by adding in ~/.zshrc:
+
+在~/.zshrc众添加
+fpath=(~/.zsh/completion $fpath)
+
+Make sure compinit is loaded or do it by adding in ~/.zshrc
+
+autoload -Uz compinit && compinit -i
+
+重新加载shell
+
+exec $SHELL -l
+
+
+Place the completion script in your /path/to/zsh/completion (typically ~/.zsh/completion/):
+
+$ mkdir -p ~/.zsh/completion
+$ curl -L https://raw.githubusercontent.com/docker/compose/1.21.0/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
+
+Include the directory in your $fpath by adding in ~/.zshrc:
+fpath=(~/.zsh/completion $fpath)
+
+Make sure compinit is loaded or do it by adding in ~/.zshrc:
+
+autoload -Uz compinit && compinit -i
+
+Then reload your shell:
+
+exec $SHELL -l
+
+可以补全的选项
+
+Available completions
+Depending on what you typed on the command line so far, it completes:
+
+available docker-compose commands
+
+options that are available for a particular command
+service names that make sense in a given context, such as services with running or stopped instances or services based on images vs. services based on Dockerfiles. For docker-compose scale, completed service names automatically have “=” appended.
+arguments for selected options. For example, docker-compose kill -s completes some signals like SIGHUP and SIGUSR1.
+Enjoy working with Compose faster and with less typos!
+*** tutorials/Docker.md
+*** 使用非root用户管理docker
+https://docs.docker.com/install/linux/linux-postinstall/
 
 ** 网站镜像
 国内一个 国外一个
 访问速度,根据ip访问最近的镜像
 备份一个出了问题,访问另一个
 
- 希望什么样的反馈
-产品使用中出现问题
-新的想法、需求、改进
-
- 不良反馈
-问一些和项目无关问题
-提问者自己遇到的问题，是自己项目出了问题
-反馈的人少
-项目一定时自己用的，自己用才有动力去维护
-项目要有真实的需求，很多人用，使用频繁
-
- 项目本身要有盈利能力
-利用github来协作,完成活
-
- 会员系统
-使用github登陆
-微信登陆
-
- 管理人员
-有问题@管理人员
-20180320_154903.png
-回复中默认隐藏点赞,只有鼠标移动到回复箭头处,才显示点赞按钮
-
-微信公众号文章中设置的,是显示这个点赞的小手的
-可以只显示那个回复的箭头,当鼠标停留在回复区域时,当条回复,显示所有的回复类型
-
-回复 点赞 分享 订阅 匿名回复 收藏
-分享,将这个文章分享到,社交网站上
-可以定制自己常用的,之后的隐藏在"更多"中,点击可以选择
-
-订阅这个帖子后续的回复更新
-
-匿名回复
-只是其他人看不到,论坛后台还是可以看到真实的用户信息
-用于责任追究
-
-收藏用于保存有价值的回复消息,可以添加备注
-是否提供修改功能?
-一些高级会员可以提供
-免费的会员,只能收藏,不能备注,修改
-
-会员执行相关操作,帐号不满足相关权限.提示信息,这个需要的积分等级,开通指导,开通后,同时获得的权限清单
-
-绑定自己的帐号key之外,可以分享到社区中
-需要社区这边,抓取吗?
-还是社交app中提供这样的调用接口
-这个可以显示在人的动态中
-类似于朋友圈功能
-关系连在社区中
-
-记录每个帖子上次浏览之后的位置,在标题后面,显示消息更新的数量
-像微信群那样
-可以选择忽略
-默认是关闭的,rss当前帖子之后才会显示
-这样可以降低服务器的压力
-
-回复框中,可以选择表情
-按照微信中的
-选择一些常用的表情
-可以保存自定义表情,那种微信斗图的?
-
-论坛的人,达到一定级别,可以对论坛中违规的人,进行扣分
-根据所处的位置,自动下拉候选,扣分的理由
-
-标题
-回复
-帐号
-这样全名监督,都个人都会有参与感
-共同维护论坛的秩序
-
-有一个页面,实时显示扣分奖励的记录
-详情中,显示详细内容
-
-每一个主题贴都是一个markdown文件
-那些不使用markdown语法,使用默认网页编辑的帖子,还是和正常一样
-只是为那些高级用户提供一个接口,可以用narkdown文件来发布帖子
-方便自己版控,及时更新,维护.
-可以将回复中的内容整合到正文中
-使用nodejs做一个工具
-选择文件,打开 md文件 
-预览
-发布
-最后生成的也是html文档,可以将对应主题的html文档作为发布形式吗?
-在本地导出html,上传到论坛
-
-cndoe的源码,学习的时候,注释直接在当前行后面添加.这样不会破坏原先代码的行数
-使用差异文件查看时,也是显示在一行中
-注释直接注释在代码中,可以及时跟随版本
-注释也可以及时跟随代码的变化
-
-写工具将markdown转换成cndoe支持的语法
-这个应该有现成工具
-
-发布到cnode中
-这个环节用nodejs写个命令行工具,供第三方调用
-
-每个项目开发的周期为一周,
-要控制项目的大小,降低复杂度,在一个星期能完成
-3个人,技能补充,人员备份,一些工作分工
-奖金比例1135 按照贡献奖励100 300 500 完成后平台奖励100
-培养团队人才
-入门的人,简单的工作
-代码的协作都放在github中,
-开一个分支供这个项目开发团队用,每天构建,自动化构建,集成到最新版本中
-及时处理冲突
-
-论坛上传图片,返回图片连接
-直接是markdown的格式
-支持批量操作
-图片外联,可以限制,只能cnode域名访问吗?或者限制外联的调用次数
-避免被当作图床使用
-
-编码规范
-    const count = await ctx.service.message.getMessagesCount(user._id);
-    user.messages_count = count;
-    ctx.locals.current_user = user;
-    await next();
-
-const count = await ctx.service.message.get_messages_count(user._id);
-下划线分割,方便阅读
+** [[file:github%E4%B8%8Afork%E5%88%AB%E4%BA%BA%E7%9A%84repo%E5%BC%80%E5%90%AFissue%E5%92%8Cwiki.org][github上fork别人的repo开启issue和wiki]]
 
 
-可以将这个工具做到服务器上,上传markdown文件,可以在本地预览.预览之后,发布
-
-本地预览,需要客户端上操作.
-
-发表帖子或者回复 要有草稿功能
-
-https://forums.debiancn.org/t/topic/1355
-论坛机器人
-这个机器人有什么功能
-cnode也做一个机器人
-
-https://cnodejs.org/topic/5aae829ff5dfc27d7ad98932
-论坛中的连接自动转换成短网址
-20180320_161118.png
-短网址解析先用新浪的t.cn 之后不是复杂对性能要求不高的话,自己做
-
-有积分奖励的帖子,用红色赏字,标识一下.
-显示在标题前面,后面标识上赏的金额?
-
-发帖类型中,选择类型
-分享
- 设置积分.达到这个积分后,帖子会被设置成公开
-
-提问
- 不强制悬赏 悬赏金额 着急或者需要好的答案,可以追加悬赏
-
-悬赏
- 设置悬赏金额
- 其他人也想得到相关答案,也可以追加悬赏
- 悬赏有效期
-
-招聘 
- 招聘会自动按照时间天数来扣除.每天多少积分.每周 会有优惠
-知道关闭招聘帖子
-没有关闭,就认为是帖子还有效.
-就可以投简历
- 
-
-代码是开源的mit保留版权声明
-技术支持有偿
-有偿定制开发维护
-
-根据积分来划分不同的组
-每个问题都有积分打赏,也可以免费
-回答问题的人,可以选择免费回答,或者将自己的时间精力去回答有偿问题
-有价值的回答,有阅读权限.10积分为起点
-防止爬虫
-
-上传到网站的图片,要压缩一下
-
-magithub的配置,可以针对单个repo吗?
-每个repo对应一个帐号
-类似git的分层配置
-或者支持切换github帐号吗?
-
-使用github登录
-登录的时候,可以创建一个新的帐号
-邮箱 用户名 昵称
-
-测试
-https://cnodejs.org/topic/5aae1cc8f5dfc27d7ad98909
-公测帖子
-
-本地测试环境
-vagrant拉取配置好的镜像
-virtualbox
-镜像说明
-安装软件
-软件版本
-docker
-
-报错运行的脚本
-提示将自己信息替换掉
-不同配置文件,提示要隐藏的信息
-
-** [[file:pros-and-cons-about-nodejs.org][pros-and-cons-about-nodejs]]
-** github上fork了egg-cnode的源码,自己的fork无法新建issue?
-为学习egg-cnode源码,fork到自己名下.发现无法新建issue,自己新建的repo是可以新建issue.我fork的地址
- https://github.com/nodebbs/egg-cnode
-
-1 无法新建issue,是因为github机制吗? 自己fork别人的repo,无法新建issue?
-
-2  如果是github机制如此,想要在egg-cnode基础上学习修改,有什么好的实践吗?
-
-
-![20180508_001.png](//dn-cnode.qbox.me/FuaZG8-Qg8SaEsQW4_gZwZnCfGyh)
-
-![20180508_002.png](//dn-cnode.qbox.me/FjQKhEccqAH67joPVNYkHypHxSRg)
-
-*** 
 leaen from scratch egg-cnode
 从0开始学egg-cnode
 

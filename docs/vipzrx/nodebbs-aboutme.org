@@ -9,6 +9,7 @@
 * [[file:%E5%BC%80%E5%8F%91%E8%80%85%E6%8C%87%E5%8D%97.org][开发者指南]]
 * [[file:%E7%A4%BE%E5%8C%BA%E5%BA%93.org][社区库]]
 * [[file:%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99.org][学习资料]]
+* [[file:%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91.org][文档翻译]]
 * [[file:%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC.org][联系我们]]
 * [[file:%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5.org][友情链接]]
 * [[file:%E8%87%B4%E8%B0%A2.org][致谢]]
