@@ -1,48 +1,19 @@
-** 0 
- 这个是nodebbs网站的about页面
-https://cnodejs.org/about
+* 0
+ [[file:lfs-egg-cnode.org][lfs-egg-cnode含义]]  [[file:%E6%9C%AF%E8%AF%AD.org][术语]] [[file:nodebbs-aboutme.org][nodebbs-aboutme]]  [[file:travis-ci%E9%9B%86%E6%88%90%E6%95%99%E7%A8%8B.org][travis-ci集成教程]] 
+
+** 0
+github的使用,还是要真正的协作使用起来,才知道怎么用
+
+  这个是nodebbs网站的about页面
+对应https://cnodejs.org/about
 使用路由about
 
 ln '/home/kk/nut/nodebbs_nodebbs-blog/docs/vipzrx/readme.org' '/home/kk/nut/nodebbs_nodebbs-blog/.github'
 
 硬链接形式.现在主要是自己整理,先链接到自己名字目录下的readme文件.以后有人参与进来了,链接再修改成一个面向国人的适合引导说明的readme
 
-** [[file:lfs-egg-cnode][lfs-egg-cnode含义]]
-[[file:%E6%9C%AF%E8%AF%AD][术语]] [[file:nodebbs-aboutme][nodebbs-aboutme]]
+emacs编辑之后,硬链接会失效?
 
-自动ci有些网站是被墙的
-** [[file:travis-ci%E9%9B%86%E6%88%90%E6%95%99%E7%A8%8B][travis-ci集成教程]]
-
-使用fork形式修改,不采用从头开始.先用起来,然后从小的地方一点一点修改
-
-travis文件语法
-申请
-图标网站
-
-https://shikieiki.github.io/2017/03/01/为你的Github生成漂亮的徽章和进度条/
-Email : 515073770@qq.com
-GitHub : https://github.com/ShikiEiki
-Weibo : 猫山四季
-QQ : 515073770
-这个人负责 徽标项目
-
-https://snyk.io/org/vipzrx/test
-缺小查询网站
-
-markdown中的超级链接
-[要显示文字][地址]
-
-https://shields.io
-成徽标网站
-
-生成自定义的动态徽标
-还没有完成
-
-
-https://docs.travis-ci.com/user/getting-started/
-使用说明
-
-travis语法说明
 ** fork egg-cnode
 https://help.github.com/articles/fork-a-repo/
 
@@ -134,19 +105,8 @@ Already up-to-date.
 *** 自己在本地添加自己的修改
 
 *** push到自己的fork和别人协作
-
 *** 向egg-cnode提交pr
-
-<<<<<<< HEAD
-** linux下显示隐藏文件
-linux下.开头文件为隐藏文件,Ctrl+H 显示隐藏文件
-
-命令行下 使用ls -a 显示隐藏文件
-
-** github commit提交乱码
- create mode 100644 "docs/vipzrx/\350\277\220\344\275\234\345\275\242\345\274\217"
-➜  nodebbs_egg-cnode git:(master) git config --global core.quotepath false
-
+[[file:linux%E4%B8%8B%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6.org][linux下显示隐藏文件]]  [[file:github%20commit%E6%8F%90%E4%BA%A4%E4%B9%B1%E7%A0%81.org][github commit提交乱码]]
 ** 添加自己的readme
 github上readme的顺序
 
@@ -472,11 +432,7 @@ debian默认没有配置文件,新建一个
 重启docker
 ➜  ~ sudo service docker restart
 
-** 0
-
-github的使用,还是要真正的协作使用起来,才知道怎么用
-
-** [[file:%E5%8F%91%E5%B8%83%E5%91%A8%E6%9C%9F][发布周期]]
+** [[file:%E5%8F%91%E5%B8%83%E5%91%A8%E6%9C%9F.org][发布周期]]
 每周冻结一次,周一开始版本翻译.周一重置issue中的task list流程
 
 分层负责
@@ -493,10 +449,8 @@ github的使用,还是要真正的协作使用起来,才知道怎么用
 一些人力资金资源
 给微软的信,先写成中文的,再写成英文的
 
-** cnode部署要求
-cpu 内存
-多少人在线
-基本功能要求
+** [[file:nodebbs%E9%83%A8%E7%BD%B2%E8%A6%81%E6%B1%82.org][nodebbs部署要求]]
+
 ** 网站镜像
 国内一个 国外一个
 访问速度,根据ip访问最近的镜像
@@ -683,7 +637,7 @@ magithub的配置,可以针对单个repo吗?
 登录的时候,可以创建一个新的帐号
 邮箱 用户名 昵称
 
-** egg-cnode测试
+测试
 https://cnodejs.org/topic/5aae1cc8f5dfc27d7ad98909
 公测帖子
 
@@ -699,32 +653,7 @@ docker
 提示将自己信息替换掉
 不同配置文件,提示要隐藏的信息
 
-** pros-and-cons-about-nodejs
-讨论nodejs的好处与坏处
-一个总的帖子,进行相关讨论
-
-Pros
-
-Cons
-
-Conclusion
-评价总结
-
-苏宁的钱都化完了
-临时的任务,新开一个terminal,处理完成了,就关闭掉.相当于是开了一个分支
-
-bin存放可以公开的脚本
-使用github托管
-
-pri中存放有帐号,不方便公开的配置,脚本
-ss自动启动脚本
-
-搭建samba
-共享文件
-将H2的1T b共享出来
-
-和外界的共享,通过虚拟机来做跳板,控制好权限
-
+** [[file:pros-and-cons-about-nodejs.org][pros-and-cons-about-nodejs]]
 ** github上fork了egg-cnode的源码,自己的fork无法新建issue?
 为学习egg-cnode源码,fork到自己名下.发现无法新建issue,自己新建的repo是可以新建issue.我fork的地址
  https://github.com/nodebbs/egg-cnode
@@ -739,3 +668,18 @@ ss自动启动脚本
 ![20180508_002.png](//dn-cnode.qbox.me/FjQKhEccqAH67joPVNYkHypHxSRg)
 
 *** 
+leaen from scratch egg-cnode
+从0开始学egg-cnode
+
+https://www.zhihu.com/question/268421668
+已经关注
+
+vue单页转换小程序
+
+https://github.com/wdfe/weweb
+小程序转web
+
+http://www.infoq.com/cn/articles/meili-11-11-mini-program
+蘑菇街的分享
+
+http://mirrors.ustc.edu.cn/help/dockerhub.html

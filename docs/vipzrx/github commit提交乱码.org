@@ -1,0 +1,8 @@
+显示乱码:
+
+ create mode 100644 "docs/vipzrx/\350\277\220\344\275\234\345\275\242\345\274\217"
+➜  nodebbs_egg-cnode 
+
+解决:
+
+git:(master) git config --global core.quotepath false

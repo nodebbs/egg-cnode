@@ -1,3 +1,36 @@
+自动ci有些网站是被墙的
+
+使用fork形式修改,不采用从头开始.先用起来,然后从小的地方一点一点修改
+
+travis文件语法
+申请
+图标网站
+
+https://shikieiki.github.io/2017/03/01/为你的Github生成漂亮的徽章和进度条/
+Email : 515073770@qq.com
+GitHub : https://github.com/ShikiEiki
+Weibo : 猫山四季
+QQ : 515073770
+这个人负责 徽标项目
+
+https://snyk.io/org/vipzrx/test
+缺小查询网站
+
+markdown中的超级链接
+[要显示文字][地址]
+
+https://shields.io
+成徽标网站
+
+生成自定义的动态徽标
+还没有完成
+
+
+https://docs.travis-ci.com/user/getting-started/
+使用说明
+
+travis语法说明
+
 登录地址
 https://travis-ci.org
 
