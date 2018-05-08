@@ -1,15 +1,41 @@
-*** 源码
-**** 版权
+* 源码
+** 版权
 mit
 
-*** api
+* api
 api说明 使用示例
 
-*** 素材
+
+* 素材
 logo资源
 用图片展示,版权说明,展示下载地址
 
-*** 客户端开发指南
-*** 插件开发指南
-*** 主题开发指南
-*** 上线部署指南
+* 本地开发环境
+vagrant拉取配置好的镜像
+virtualbox
+镜像说明
+安装软件
+软件版本
+docker
+* 客户端开发指南
+* nodebbs插件开发指南
+* nodebbs主题开发指南
+* 上线部署指南
+[[file:nodebbs%E9%83%A8%E7%BD%B2%E8%A6%81%E6%B1%82.org][nodebbs部署要求]] 
+
+* 小程序客户端开发指南
+https://www.zhihu.com/question/268421668
+已经关注
+
+vue单页转换小程序
+
+https://github.com/wdfe/weweb
+小程序转web
+
+http://www.infoq.com/cn/articles/meili-11-11-mini-program
+蘑菇街的分享
+
+http://mirrors.ustc.edu.cn/help/dockerhub.html
+* web客户端开发指南
+* 测试指南
+* 

@@ -1,0 +1,13 @@
+* 源码文件头部信息
+代码维护人 有问题,可以定位到人.方便交流
+相关文档说明
+
+编码规范
+    const count = await ctx.service.message.getMessagesCount(user._id);
+    user.messages_count = count;
+    ctx.locals.current_user = user;
+    await next();
+
+const count = await ctx.service.message.get_messages_count(user._id);
+下划线分割,方便阅读
+
