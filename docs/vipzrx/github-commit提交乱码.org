@@ -1,0 +1,44 @@
+>what 
+
+终端中输入 git status 显示乱码
+```bash
+➜  .github git:(master) ✗ git status 
+git status 
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   "../doc/\347\233\256\345\275\225\347\273\223\346\236\204.md"
+
+```
+
+>why
+
+git 默认中文文件名是 \xxx\xxx 等八进制形式,对0x80以上的字符进行quote 
+
+>ref
+
+https://blog.csdn.net/zhanlanmg/article/details/49862779
+
+>how
+
+core.quotepath设为false的话，就不会对0x80以上的字符进行quote。中文显示正常
+
+>step
+
+git config --global core.quotepath false 
+
+``` bash
+➜  .github git:(master) ✗ git config --global core.quotepath false 
+<global core.quotepath false 
+➜  .github git:(master) ✗ git status 
+git status 
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+new file:   ../doc/目录结构.md
+	
+```

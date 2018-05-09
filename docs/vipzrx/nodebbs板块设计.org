@@ -25,11 +25,27 @@ todo的顺序,按照需求程度,和自己能力,以及实现的复杂度
 注册帐号
 替换成nodebbs
 * 修改readme文件中持续集成设置
+** README.md
+保留根目录下的README.md
+说明文件使用.github/readme.md
+
+** Dockerfile
+** docker-compose.yml
+** docker-compose.dev.yml
+** appveyor.yml
+
+* 下载virtualbox
+** 使用版本
+** 下载地址
+*** 官方下载地址
+*** 百度网盘
 * 安装virtualbox
 ** windows
 ** linux
 ** mac
 * 配置virtualbox
+* 虚拟机
+导出
 
 * 安装debian
 
@@ -48,6 +64,8 @@ todo的顺序,按照需求程度,和自己能力,以及实现的复杂度
 * 腾讯云上部署egg-cnode
 debian
 docker
+
+** nodebbs_egg-cnode/tutorials/Docker.md
 
 * 上线nodebbs.cn
 域名
@@ -80,6 +98,9 @@ cndoe的源码,学习的时候,注释直接在当前行后面添加.这样不会
 
 按照文件为单位,指定维护人
 写在文件开头 反馈地址github的issue @帐号
+
+** 
+** package.json
 
 * 组建各个team
 team内部实行轮岗制度,按照月为单位一次担任team负责人

@@ -207,10 +207,10 @@
 │   ├── config.default.js*
 │   ├── plugin.js*
 │   └── plugin.prod.js*
-├── docs/
-│   ├── docs-img/
-│   │   └── mit-ruanyifeng.jpg*
-│   └── vipzrx/
+├── docs/ 文档目录
+│   ├── docs-img/ 存放文档中涉及的图片
+│   │   └── mit-ruanyifeng.jpg* mit协议
+│   └── vipzrx/ 每个帐号使用帐号名字作为文件夹名字 vipzrx用户的文档
 │       ├── 00-index.org*
 │       ├── ci状态.org*
 │       ├── cnode-issue.org*
@@ -256,8 +256,8 @@
 │       ├── 赞助.org*
 │       └── 运作形式.org*
 ├── .github/
-│   ├── PULL_REQUEST_TEMPLATE.md*
-│   └── README.md*
+│   ├── PULL_REQUEST_TEMPLATE.md* pr模板
+│   └── README.md* 自己新建的readme,优先于根目录下的readme显示,保持和cnode源码兼容
 ├── init.d/
 │   └── mongo/
 │       └── init.js*
@@ -284,7 +284,7 @@
 │           ├── topic.test.js*
 │           └── user.test.js*
 ├── tutorials/
-│   └── Docker.md*
+│   └── Docker.md* docker部署教程
 ├── app.js*
 ├── appveyor.yml*
 ├── .autod.conf.js*
@@ -295,7 +295,7 @@
 ├── .eslintignore*
 ├── .eslintrc*
 ├── .gitignore*
-├── LICENSE*
+├── LICENSE* 版权文件
 ├── package.json*
 ├── README.md*
 ├── .snyk*
