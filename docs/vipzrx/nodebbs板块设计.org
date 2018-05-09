@@ -13,12 +13,32 @@ todo的顺序,按照需求程度,和自己能力,以及实现的复杂度
 
 每一个功能,都做成插件形式.做一个最小的内核,其他的以插件形式集成,可以任意关闭,像debian那样有包管理工具,解决依赖问题
 
-* fork egg-cnode源码
-* 修改readme文件中持续集成设置
+* DONE fork egg-cnode源码
+  CLOSED: [2018-05-09 Wed 14:19]
+  - State "DONE"       from "STARTED"    [2018-05-09 Wed 14:19]
+ [[file:fork-egg-cnode.org][fork-egg-cnode]]
+* DONE 添加自己的readme
+  CLOSED: [2018-05-09 Wed 14:25]
+  - State "DONE"       from "STARTED"    [2018-05-09 Wed 14:25]
+ [[file:github%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%B7%B1%E7%9A%84readme.org][github添加自己的readme]]
+
 注册帐号
 替换成nodebbs
+* 修改readme文件中持续集成设置
+* 安装virtualbox
+** windows
+** linux
+** mac
+* 配置virtualbox
 
-* vagrant搭建本地环境
+* 安装debian
+
+首次配置
+* 安装docker
+* 安装nodejs
+* 安装redis
+* 安装mongose
+* 安装vagrant
 * vscode安装配置
 安装
 常用插件

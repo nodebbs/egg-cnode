@@ -1,0 +1,304 @@
+
+➜  cnodejs_egg-cnode git:(master) tree -aFC -I .git --dirsfirst  
+.
+-a 显示全部文件,包括.开头的隐藏文件
+-F 显示文件类型
+-C 文件和目录清单上加上颜色,便于区分各种类型
+-I .git 不显示 .git目录下结构
+--dirsfirst 目录先于文件显示
+
+➜  nodebbs_egg-cnode git:(master) ✗ tree -aFC -I .git --dirsfirst  
+.
+├── app/
+│   ├── controller/
+│   │   ├── message.js*
+│   │   ├── page.js*
+│   │   ├── reply.js*
+│   │   ├── rss.js*
+│   │   ├── search.js*
+│   │   ├── sign.js*
+│   │   ├── site.js*
+│   │   ├── topic.js*
+│   │   └── user.js*
+│   ├── extend/
+│   │   ├── application.js*
+│   │   └── helper.js*
+│   ├── middleware/
+│   │   ├── admin_required.js*
+│   │   ├── auth_user.js*
+│   │   ├── block_user.js*
+│   │   ├── create_topic_limit.js*
+│   │   ├── create_user_limit.js*
+│   │   ├── error_page.js*
+│   │   ├── less.js*
+│   │   ├── locals.js*
+│   │   └── user_required.js*
+│   ├── model/
+│   │   ├── message.js*
+│   │   ├── reply.js*
+│   │   ├── topic_collect.js*
+│   │   ├── topic.js*
+│   │   └── user.js*
+│   ├── public/
+│   │   ├── images/
+│   │   │   ├── cnode_icon_32.png*
+│   │   │   ├── cnode_icon_64.png*
+│   │   │   ├── cnodejs_light.svg*
+│   │   │   ├── cnodejs.svg*
+│   │   │   ├── cnode_logo_128.png*
+│   │   │   ├── cnode_logo_32.png*
+│   │   │   ├── digitalocean.png*
+│   │   │   ├── egg-logo.png*
+│   │   │   ├── golangtc-logo.png*
+│   │   │   ├── iojs-logo.png*
+│   │   │   ├── iojs-logo-w150h50.png*
+│   │   │   ├── logo_bak.png*
+│   │   │   ├── logo.png*
+│   │   │   ├── nodejs_black.png*
+│   │   │   ├── phphub-logo.png*
+│   │   │   ├── qiniu.png*
+│   │   │   ├── ruby-china-20150529.png*
+│   │   │   ├── ruby-china-logo2.png*
+│   │   │   ├── search.png*
+│   │   │   ├── ucloud.png*
+│   │   │   └── upyun_logo.png*
+│   │   ├── img/
+│   │   │   ├── glyphicons-halflings.png*
+│   │   │   └── glyphicons-halflings-white.png*
+│   │   ├── javascripts/
+│   │   │   ├── main.js*
+│   │   │   └── responsive.js*
+│   │   ├── libs/
+│   │   │   ├── bootstrap/
+│   │   │   │   ├── css/
+│   │   │   │   │   ├── bootstrap.css*
+│   │   │   │   │   ├── bootstrap.min.css*
+│   │   │   │   │   ├── bootstrap-responsive.css*
+│   │   │   │   │   └── bootstrap-responsive.min.css*
+│   │   │   │   ├── img/
+│   │   │   │   │   ├── glyphicons-halflings.png*
+│   │   │   │   │   └── glyphicons-halflings-white.png*
+│   │   │   │   └── js/
+│   │   │   │       ├── bootstrap.js*
+│   │   │   │       └── bootstrap.min.js*
+│   │   │   ├── code-prettify/
+│   │   │   │   ├── lang-apollo.js*
+│   │   │   │   ├── lang-clj.js*
+│   │   │   │   ├── lang-css.js*
+│   │   │   │   ├── lang-go.js*
+│   │   │   │   ├── lang-hs.js*
+│   │   │   │   ├── lang-lisp.js*
+│   │   │   │   ├── lang-lua.js*
+│   │   │   │   ├── lang-ml.js*
+│   │   │   │   ├── lang-n.js*
+│   │   │   │   ├── lang-proto.js*
+│   │   │   │   ├── lang-scala.js*
+│   │   │   │   ├── lang-sql.js*
+│   │   │   │   ├── lang-tex.js*
+│   │   │   │   ├── lang-vb.js*
+│   │   │   │   ├── lang-vhdl.js*
+│   │   │   │   ├── lang-wiki.js*
+│   │   │   │   ├── lang-xq.js*
+│   │   │   │   ├── lang-yaml.js*
+│   │   │   │   ├── prettify.css*
+│   │   │   │   └── prettify.js*
+│   │   │   ├── editor/
+│   │   │   │   ├── fonts/
+│   │   │   │   │   ├── icomoon.dev.svg*
+│   │   │   │   │   ├── icomoon.eot*
+│   │   │   │   │   ├── icomoon.svg*
+│   │   │   │   │   ├── icomoon.ttf*
+│   │   │   │   │   └── icomoon.woff*
+│   │   │   │   ├── editor.css*
+│   │   │   │   ├── editor.js*
+│   │   │   │   └── ext.js*
+│   │   │   ├── font-awesome/
+│   │   │   │   ├── css/
+│   │   │   │   │   └── font-awesome.css*
+│   │   │   │   └── fonts/
+│   │   │   │       ├── FontAwesome.otf*
+│   │   │   │       ├── fontawesome-webfont.eot*
+│   │   │   │       ├── fontawesome-webfont.svg*
+│   │   │   │       ├── fontawesome-webfont.ttf*
+│   │   │   │       └── fontawesome-webfont.woff*
+│   │   │   ├── webuploader/
+│   │   │   │   ├── webuploader.css*
+│   │   │   │   └── webuploader.withoutimage.js*
+│   │   │   ├── jquery-2.1.0.js*
+│   │   │   ├── jquery.atwho.js*
+│   │   │   ├── jquery.caret.js*
+│   │   │   ├── jquery-ujs.js*
+│   │   │   ├── lodash.compat.js*
+│   │   │   ├── markdownit.js*
+│   │   │   └── qrcode.js*
+│   │   ├── stylesheets/
+│   │   │   ├── common.css*
+│   │   │   ├── jquery.atwho.css*
+│   │   │   ├── responsive.css*
+│   │   │   └── style.less*
+│   │   ├── upload/
+│   │   │   └── .gitkeep*
+│   │   └── github-card.html*
+│   ├── service/
+│   │   ├── at.js*
+│   │   ├── cache.js*
+│   │   ├── mail.js*
+│   │   ├── message.js*
+│   │   ├── reply.js*
+│   │   ├── search.js*
+│   │   ├── topic_collect.js*
+│   │   ├── topic.js*
+│   │   └── user.js*
+│   ├── view/
+│   │   ├── includes/
+│   │   │   └── editor.html*
+│   │   ├── message/
+│   │   │   ├── index.html*
+│   │   │   └── message.html*
+│   │   ├── notify/
+│   │   │   └── notify.html*
+│   │   ├── reply/
+│   │   │   ├── edit.html*
+│   │   │   └── reply.html*
+│   │   ├── search/
+│   │   │   └── index.html*
+│   │   ├── sign/
+│   │   │   ├── new_oauth.html*
+│   │   │   ├── no_github_email.html*
+│   │   │   ├── reset.html*
+│   │   │   ├── search_pass.html*
+│   │   │   ├── sidebar.html*
+│   │   │   ├── signin.html*
+│   │   │   └── signup.html*
+│   │   ├── static/
+│   │   │   ├── about.html*
+│   │   │   ├── api.html*
+│   │   │   ├── faq.html*
+│   │   │   └── getstart.html*
+│   │   ├── topic/
+│   │   │   ├── abstract.html*
+│   │   │   ├── edit.html*
+│   │   │   ├── index.html*
+│   │   │   ├── list.html*
+│   │   │   ├── small.html*
+│   │   │   └── _top_good.html*
+│   │   ├── user/
+│   │   │   ├── card.html*
+│   │   │   ├── collect_topics.html*
+│   │   │   ├── index.html*
+│   │   │   ├── replies.html*
+│   │   │   ├── setting.html*
+│   │   │   ├── stars.html*
+│   │   │   ├── top100.html*
+│   │   │   ├── top100_user.html*
+│   │   │   ├── top.html*
+│   │   │   ├── topics.html*
+│   │   │   └── user.html*
+│   │   ├── _ads.html*
+│   │   ├── editor_sidebar.html*
+│   │   ├── index.html*
+│   │   ├── layout.html*
+│   │   ├── sidebar.html*
+│   │   └── _sponsors.html*
+│   └── router.js*
+├── bin/
+│   └── generate_access_token.js*
+├── config/
+│   ├── config.default.js*
+│   ├── plugin.js*
+│   └── plugin.prod.js*
+├── docs/
+│   ├── docs-img/
+│   │   └── mit-ruanyifeng.jpg*
+│   └── vipzrx/
+│       ├── 00-index.org*
+│       ├── ci状态.org*
+│       ├── cnode-issue.org*
+│       ├── egg-cnode测试.org*
+│       ├── fork-egg-cnode.org*
+│       ├── github commit提交乱码.org*
+│       ├── github上fork别人的repo开启issue和wiki.org*
+│       ├── github添加自己的readme.org*
+│       ├── lfs-egg-cnode.org*
+│       ├── linux下显示隐藏文件.org*
+│       ├── nodebbs-aboutme.org*
+│       ├── nodebbs-bin使用指南.org*
+│       ├── nodebbs-core分支说明.org*
+│       ├── nodebbs-faq.org*
+│       ├── nodebbs.org*
+│       ├── nodebbs-vipzrx-todo.org*
+│       ├── nodebbs板块设计.org*
+│       ├── nodebbs源码目录结构.org*
+│       ├── nodebbs部署要求.org*
+│       ├── pros-and-cons-about-nodejs.org*
+│       ├── README.md*
+│       ├── travis-ci集成教程.org*
+│       ├── 友情链接.org*
+│       ├── 反馈问题.org*
+│       ├── 发布周期.org*
+│       ├── 学习资料.org*
+│       ├── 客户端.org*
+│       ├── 工作进展.org*
+│       ├── 开发模式.org*
+│       ├── 开发者指南.org*
+│       ├── 成员.org*
+│       ├── 技术栈.org*
+│       ├── 文档翻译.org*
+│       ├── 术语.org*
+│       ├── 版权说明.org*
+│       ├── 社区库.org*
+│       ├── 积分系统.org*
+│       ├── 简介.org*
+│       ├── 维护人.org*
+│       ├── 编码规范.org*
+│       ├── 网站运行状态.org*
+│       ├── 联系我们.org*
+│       ├── 赞助.org*
+│       └── 运作形式.org*
+├── .github/
+│   ├── PULL_REQUEST_TEMPLATE.md*
+│   └── README.md*
+├── init.d/
+│   └── mongo/
+│       └── init.js*
+├── test/
+│   └── app/
+│       ├── controller/
+│       │   ├── message.test.js*
+│       │   ├── page.test.js*
+│       │   ├── reply.test.js*
+│       │   ├── rss.test.js*
+│       │   ├── search.test.js*
+│       │   ├── sign.test.js*
+│       │   ├── site.test.js*
+│       │   ├── topic.test.js*
+│       │   └── user.test.js*
+│       └── service/
+│           ├── at.test.js*
+│           ├── cache.test.js*
+│           ├── mail.test.js*
+│           ├── message.test.js*
+│           ├── reply.test.js*
+│           ├── search.test.js*
+│           ├── topic_collect.test.js*
+│           ├── topic.test.js*
+│           └── user.test.js*
+├── tutorials/
+│   └── Docker.md*
+├── app.js*
+├── appveyor.yml*
+├── .autod.conf.js*
+├── docker-compose.dev.yml*
+├── docker-compose.yml*
+├── Dockerfile*
+├── .dockerignore*
+├── .eslintignore*
+├── .eslintrc*
+├── .gitignore*
+├── LICENSE*
+├── package.json*
+├── README.md*
+├── .snyk*
+└── .travis.yml*
+
+47 directories, 244 files

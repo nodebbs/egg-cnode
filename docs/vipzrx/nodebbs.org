@@ -5,19 +5,12 @@
 [[file:nodebbs-aboutme.org][nodebbs-aboutme]]  
 [[file:travis-ci%E9%9B%86%E6%88%90%E6%95%99%E7%A8%8B.org][travis-ci集成教程]] 
 [[file:pros-and-cons-about-nodejs.org][pros-and-cons-about-nodejs]]
-[[file:github%E4%B8%8Afork%E5%88%AB%E4%BA%BA%E7%9A%84repo%E5%BC%80%E5%90%AFissue%E5%92%8Cwiki.org][github上fork别人的repo开启issue和wiki]]
-
 magithub的配置,可以针对单个repo吗?
 每个repo对应一个帐号
 类似git的分层配置
 或者支持切换github帐号吗?
 
-
-* 0
-** 0
-github的使用,还是要真正的协作使用起来,才知道怎么用
-
-  这个是nodebbs网站的about页面
+ 这个是nodebbs网站的about页面
 对应https://cnodejs.org/about
 使用路由about
 
@@ -27,194 +20,13 @@ ln '/home/kk/nut/nodebbs_nodebbs-blog/docs/vipzrx/readme.org' '/home/kk/nut/node
 
 emacs编辑之后,硬链接会失效?
 
-** fork egg-cnode
-https://help.github.com/articles/fork-a-repo/
-
-*** fork
-https://github.com/cnodejs/egg-cnode
-点击 fork
-
-弹出的菜单中,选择fork在的用户名或者组织名字
-/home/kk/pic/pic_fs/20180503_001.png
-
-选择 nodebbs
-*** clone自己的fork到本地
-使用ssh协议 提交时候,不用输入帐号,密码验证
-使用主机别名 gh
-#+BEGIN_SRC 
-➜  soft_github git clone gh:nodebbs/egg-cnode.git nodebbs_egg-cnode
-Cloning into 'nodebbs_egg-cnode'...
-remote: Counting objects: 1232, done.
-remote: Compressing objects: 100% (3/3), done.
-remote: Total 1232 (delta 2), reused 0 (delta 0), pack-reused 1229
-Receiving objects: 100% (1232/1232), 1.12 MiB | 83.00 KiB/s, done.
-Resolving deltas: 100% (645/645), done.
-
-#+END_SRC
-
-*** 建立远程分支,跟踪cnode/egg-cnode的最新代码
-
-进入源码目录
-➜  soft_github cd nodebbs_egg-cnode 
-
-查看现有远程分支
-#+BEGIN_SRC 
-  nodebbs_egg-cnode git:(master) git remote -v
-origin	gh:nodebbs/egg-cnode.git (fetch)
-origin	gh:nodebbs/egg-cnode.git (push)
-
-#+END_SRC
-是自己fork的版本
-
-添加被fork地址为远程分支
-#+BEGIN_SRC 
-➜  nodebbs_egg-cnode git:(master) git remote add cnodejs gh:cnodejs/egg-cnode.git
-
-#+END_SRC
-
-查看添加之后的远程分支
-#+BEGIN_SRC 
-➜  nodebbs_egg-cnode git:(master) git remote -v
-cnodejs	gh:cnodejs/egg-cnode.git (fetch)
-cnodejs	gh:cnodejs/egg-cnode.git (push)
-origin	gh:nodebbs/egg-cnode.git (fetch)
-origin	gh:nodebbs/egg-cnode.git (push)
-➜  nodebbs_egg-cnode git:(master) 
-
-#+END_SRC
-
-https://help.github.com/articles/syncing-a-fork/
-
-fetch cnodejs更新
-#+BEGIN_SRC 
-➜  nodebbs_egg-cnode git:(master) git fetch  cnodejs
-From gh:cnodejs/egg-cnode
- * [new branch]      api               -> cnodejs/api
- * [new branch]      fix_issue_52      -> cnodejs/fix_issue_52
- * [new branch]      fix_topic         -> cnodejs/fix_topic
- * [new branch]      master            -> cnodejs/master
- * [new branch]      refactor-tools    -> cnodejs/refactor-tools
- * [new branch]      remove_base_model -> cnodejs/remove_base_model
- * [new branch]      the-best-way-to-write-test-assert -> cnodejs/the-best-way-to-write-test-assert
-
-#+END_SRC
-
-切换到本地master分支
-#+BEGIN_SRC 
-➜  nodebbs_egg-cnode git:(master) git checkout master
-Already on 'master'
-Your branch is up-to-date with 'origin/master'.
-
-#+END_SRC
-
-将远程cnodejs分支的更新合并到本地master分支
-#+BEGIN_SRC 
-➜  nodebbs_egg-cnode git:(master) git merge cnodejs/master
-Already up-to-date.
-
-#+END_SRC
-
-*** 自己在本地添加自己的修改
-*** push到自己的fork和别人协作
-*** 向egg-cnode提交pr
-** 添加自己的readme
-github上readme的顺序
-
-cd ./.github
-touch README.org
-
-#+BEGIN_SRC 
-➜  nodebbs_egg-cnode git:(master) git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	.github/README.org
-
-nothing added to commit but untracked files present (use "git add" to track)
-➜  nodebbs_egg-cnode git:(master) ✗ git add .github/README.org 
-➜  nodebbs_egg-cnode git:(master) ✗ git commit -m "添加 .github/README.org"
-[master fc5cd30] 添加 .github/README.org
- 1 file changed, 1 insertion(+)
- create mode 100644 .github/README.org
-➜  nodebbs_egg-cnode git:(master) git push
-Counting objects: 4, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (4/4), 394 bytes | 0 bytes/s, done.
-Total 4 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To gh:nodebbs/egg-cnode.git
-   ac01b48..fc5cd30  master -> master
-
-#+END_SRC
-
-#+BEGIN_SRC 
-➜  soft_github git clone gh:nodebbs/egg-cnode.git nodebbs_egg-cnode
-Cloning into 'nodebbs_egg-cnode'...
-remote: Counting objects: 1232, done.
-remote: Compressing objects: 100% (3/3), done.
-remote: Total 1232 (delta 2), reused 0 (delta 0), pack-reused 1229
-Receiving objects: 100% (1232/1232), 1.12 MiB | 83.00 KiB/s, done.
-Resolving deltas: 100% (645/645), done.
-➜  soft_github cd nodebbs_egg-cnode 
-➜  nodebbs_egg-cnode git:(master) git remote -v
-origin	gh:nodebbs/egg-cnode.git (fetch)
-origin	gh:nodebbs/egg-cnode.git (push)
-➜  nodebbs_egg-cnode git:(master) git remote add cnodejs gh:cnodejs/egg-cnode.git
-➜  nodebbs_egg-cnode git:(master) git remote -v
-cnodejs	gh:cnodejs/egg-cnode.git (fetch)
-cnodejs	gh:cnodejs/egg-cnode.git (push)
-origin	gh:nodebbs/egg-cnode.git (fetch)
-origin	gh:nodebbs/egg-cnode.git (push)
-➜  nodebbs_egg-cnode git:(master) git fetch  cnodejs
-From gh:cnodejs/egg-cnode
- * [new branch]      api               -> cnodejs/api
- * [new branch]      fix_issue_52      -> cnodejs/fix_issue_52
- * [new branch]      fix_topic         -> cnodejs/fix_topic
- * [new branch]      master            -> cnodejs/master
- * [new branch]      refactor-tools    -> cnodejs/refactor-tools
- * [new branch]      remove_base_model -> cnodejs/remove_base_model
- * [new branch]      the-best-way-to-write-test-assert -> cnodejs/the-best-way-to-write-test-assert
-➜  nodebbs_egg-cnode git:(master) git checkout master
-Already on 'master'
-Your branch is up-to-date with 'origin/master'.
-➜  nodebbs_egg-cnode git:(master) git merge cnodejs/master
-Already up-to-date.
-➜  nodebbs_egg-cnode git:(master) git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	.github/README.org
-
-nothing added to commit but untracked files present (use "git add" to track)
-➜  nodebbs_egg-cnode git:(master) ✗ git add .github/README.org 
-➜  nodebbs_egg-cnode git:(master) ✗ git commit -m "添加 .github/README.org"
-[master fc5cd30] 添加 .github/README.org
- 1 file changed, 1 insertion(+)
- create mode 100644 .github/README.org
-➜  nodebbs_egg-cnode git:(master) git push
-Counting objects: 4, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (4/4), 394 bytes | 0 bytes/s, done.
-Total 4 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To gh:nodebbs/egg-cnode.git
-   ac01b48..fc5cd30  master -> master
-➜  nodebbs_egg-cnode git:(master) 
-
-#+END_SRC
-** 建立硬链接
+** 建立硬链接方便同一更新文件
 #+BEGIN_SRC 
 ➜  ~ ln '/mnt/h21t/soft/soft_github/nodebbs_egg-cnode/docs/vipzrx/README.org' '/mnt/h21t/soft/soft_github/nodebbs_egg-cnode/.github'
 
 #+END_SRC
-** 任务模板
-** 安装docker
+
+** debian安装docker
 *** debian安装docker
 https://docs.docker.com/install/linux/docker-ce/debian/#set-up-the-repository
 按照这个教程安装
@@ -436,11 +248,6 @@ Enjoy working with Compose faster and with less typos!
 *** 使用非root用户管理docker
 https://docs.docker.com/install/linux/linux-postinstall/
 *** tutorials/Docker.md
-* fork egg-cnode
-新建远程分支追踪cnodejs更新
-添加readme
-整理自己文档docs/vipzrx
-
 * 修改自动编译
 * 在本地部署docker
 * 本地搭建cnodejs

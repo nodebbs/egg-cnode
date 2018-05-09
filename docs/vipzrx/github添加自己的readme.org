@@ -1,0 +1,42 @@
+github上readme的顺序
+
+github中readme可以存放的位置为
+./README.md
+docs/README.md
+.github/README.md
+
+显示优先顺序
+> > >
+
+cd ./.github
+touch README.org
+
+#+BEGIN_SRC 
+➜  nodebbs_egg-cnode git:(master) git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.github/README.org
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+➜  nodebbs_egg-cnode git:(master) ✗ git add .github/README.org 
+
+➜  nodebbs_egg-cnode git:(master) ✗ git commit -m "添加 .github/README.org"
+[master fc5cd30] 添加 .github/README.org
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .github/README.org
+
+➜  nodebbs_egg-cnode git:(master) git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 394 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To gh:nodebbs/egg-cnode.git
+   ac01b48..fc5cd30  master -> master
+
+#+END_SRC

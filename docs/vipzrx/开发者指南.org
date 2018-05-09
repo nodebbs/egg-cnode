@@ -1,7 +1,7 @@
 * 源码
 ** 版权
 mit
-
+* [[file:nodebbs%E6%BA%90%E7%A0%81%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.org][nodebbs源码目录结构]]
 * api
 api说明 使用示例
 
