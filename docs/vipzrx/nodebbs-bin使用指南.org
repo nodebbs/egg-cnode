@@ -1,0 +1,52 @@
+* 0
+支持二级命令,像git一样
+参考deiban的apt,node基本是npm形式在线管理,所以不用实现debian中的dpkg的功能
+脚本实现可以调用npm以及linux系统自带的命令行工具
+
+源码叫nodebbs-bin 提供的命令行为nodebbs
+
+nodejs开发命令行工具使用 yars
+
+Most used commands:
+  list - list packages based on package names
+  search - search in package descriptions
+  show - show package details
+  install - install packages
+  remove - remove packages
+  autoremove - Remove automatically all unused packages
+  update - update list of available packages
+  upgrade - upgrade the system by installing/upgrading packages
+  full-upgrade - upgrade the system by removing/installing/upgrading packages
+  edit-sources - edit the source information file
+* 支持平台
+debian
+
+* pkg
+插件管理
+
+* update
+刷新软件源
+
+* dist-upgrade
+升级软件包
+
+* 查询
+
+* 打包
+
+* 报bug
+
+* 登录
+防止恶意登录,像tg那样在客户端中发送一个验证数字
+节省手机验证的费用,又能保护帐号安全
+像tg那样,可以开启二次登录,需要接收手机验证码.这个每次发送都要扣金币.
+防止恶意调用,需要输入手机号后四位,才可以
+虽然可以设置一个类似于密码的东西,但是手机接收的好处是通知功能,知道有人登录了.
+
+* 上传图片
+支持文件夹
+支持通配符
+返回到文件
+文件名字格式
+vipzrx-文件名
+服务器上完成图片尺寸的转化,生成不同格式版本

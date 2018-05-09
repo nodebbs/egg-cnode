@@ -15,4 +15,3 @@ Chrome Beta
 Git master
 git分支
 Chrome 66 Stable
-
